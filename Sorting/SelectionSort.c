@@ -4,38 +4,38 @@ int array[1000];
 
 void input_array(int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i=0;i<n;i++)
     {
-        scanf("%d", &array[i]);
+        scanf("%d",&array[i]);
     }
 }
 
 void selection_sort(int array[], int n)
 {
     int i, j, min, temp;
-    for (i = 0; i < n - 1; i++)
+    for (i=0;i<n-1;i++)
     {
         min = i;
-        for (j = i + 1; j < n; j++)
+        for (j=i+1;j<n;j++)
         {
-            if (array[j] < array[min])
+            if (array[j]<array[min])
             {
-                min = j;
+                min=j;
             }
         }
-        // Swap the found minimum element with the first element
-        if (min != i)
+        
+        if (min!=i)
         {
             temp = array[i];
-            array[i] = array[min];
-            array[min] = temp;
+            array[i]=array[min];
+            array[min]=temp;
         }
     }
 }
 
 void print_array(int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i=0;i<n;i++)
     {
         printf("%d ", array[i]);
     }
